@@ -11,23 +11,21 @@ import routes from './routes';
 
 /* Classe da App */
 class App {
+  /* Construtor da minha classe */
+  constructor() {
+    this.server = express();
+    /* Instanciando middlewares e routes */
+    this.middlewares();
+    this.routes();
+  }
 
-    /* Construtor da minha classe */
-    constructor() {
-        this.server = express();
-        /* Instanciando middlewares e routes */
-        this.middlewares();
-        this.routes();
-    }
+  middlewares() {
+    this.server.use(express.json());
+  }
 
-    middlewares() {
-        this.server.use(express.json());
-    }
-
-    routes() {
-        this.server.use(routes);
-    }
-
+  routes() {
+    this.server.use(routes);
+  }
 }
 
 /* Exportando o servidor */

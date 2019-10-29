@@ -4,8 +4,8 @@ import { Router } from 'express';
 
 const routes = new Router();
 
-routes.get('/', (req,res) => {
-    res.json({ message: 'This Server listen in port :3333'});
+routes.get('/', (req, res) => {
+  res.json({ message: 'This Server listen in port :3333' });
 });
 
 /* sucrase nele: module.exports = routes; */
